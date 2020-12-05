@@ -1,0 +1,21 @@
+<!-- Display and Rest the canvas drawing dimension -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #mycanvas{border:3px solid red;}
+    </style>
+</head>
+<body>
+    <canvas id="mycanvas" width="100" height="100"></canvas>
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        //Displaying the width and the height
+        alert (canvas.width);
+        alert (canvas.height);
+        //Increasing the width and the height
+        canvas.width=200;
+        canvas.height=300;
+    </script>
+</body>
+</html>
