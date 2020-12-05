@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { margin:0px; padding:0px }
+    </style>
+</head>
+<body>
+    <!--Specify the canvas element and set the drawable area --> 
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <!-- Using JavaScript -->
+    <script>
+        //Accessing the canvas by element ID
+        var canvas = Document.getElementById('mycanvas');
+        //setting the context to 2D and creating (context) to hold the context.
+        var context = canvas.getContext('2d');
+        //use the context to do graphics
+        context.font = '40pt calibri';
+        context.fillStyle = 'blue';
+        context.fillText('Welcome to 2d Graphics!',100, 100);
+    </script>
+</body>
+</html>
