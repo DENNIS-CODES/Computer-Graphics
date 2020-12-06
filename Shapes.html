@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- the <circle> element creates a circle with a yellow fill -->
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stoke-width="4" fill="yellow"/>
+        </svg>
+        <!-- the <line> element is used to create a line -->
+        <svg height="210" width="500">
+            <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+           </svg>
+           <!-- the <circle> element creates a circle with a green fill -->
+           <svg>
+            <circle cx="40" cy="40" r="24" style="stroke:#006600; fill:#00cc00"/>
+            </svg>
+            <!-- Creates apolygon with three sides -->
+            <svg height="210" width="500">
+                <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+               </svg>
+            <!-- Creates a polygon with four sides-->
+            <svg height="250" width="500">
+                <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
+            </svg>
+            <!-- USE <polygon> element to create a star-->
+                <svg height="210" width="500">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;"/>
+                </svg> 
+                <!-- Change the fill-rule property to "evenodd": -->
+                <svg width="300" height="200">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+                </svg>
+                <!-- creating apolygon with 8 sides -->
+                <svg width="300" height="180">
+                    <polygon points="100,10 40,198 190" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;"/>
+                    </svg> 
+    </body>
+</html>
