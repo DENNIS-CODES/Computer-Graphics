@@ -1,0 +1,13 @@
+var myPath = new Path2D();
+myPath.moveTo(50, 50);
+myPath.lineTo(100, 100);
+myPath.lineTo(0, 100);
+myPath.lineTo(50, 50);
+myPath.moveTo(50, 110);
+myPath.lineTo(0, 60);
+myPath.lineTo(100, 60);
+myPath.lineTo(50, 110);
+ctx.stroke(myPath);
+ctx.clip(myPath);
+ctx.font="normal normal 20px arial";
+ctx.fillText("Hello Text World",10,80);
