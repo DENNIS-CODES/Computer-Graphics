@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+ <script>
+ var canvas = document.getElementById('myCanvas');
+ var context = canvas.getContext('2d');
+ var x = canvas.width / 2;
+ var y = canvas.height / 2;
+ var radius = 75;
+ var offset = 50;
+ context.save();
+ context.beginPath();
+//Setting up a circle as the clipping region
+ context.arc(x, y, radius, 0, 2 * Math.PI, false);
+//Invoke context method clip() to use the circle as the clipper
+ context.clip();
+ // draw blue circle inside clipping region
+ context.beginPath();
+ context.arc(x - offset, y - offset, radius, 0, 2 * Math.PI, false);
+ context.fillStyle = 'blue';
+ context.fill();
+ // draw yellow circle inside clipping region
+ context.beginPath();
+ context.arc(x + offset, y, radius, 0, 2 * Math.PI, false);
+ context.fillStyle = 'yellow';
+ context.fill();
+ // draw red circle inside clipping region
+ context.beginPath();
+ context.arc(x, y + offset, radius, 0, 2 * Math.PI, false);
+ context.fillStyle = 'red';
+ context.fill();
+ /*
+ * restore() restores the canvas context to its original state
+ * before we defined the clipping region
+ */
+ context.restore();// Get out of the clipping region
+ context.beginPath();
+ context.arc(x, y, radius, 0, 2 * Math.PI, false);
+ context.lineWidth = 10;
+ context.strokeStyle = 'blue';
+ context.stroke();
+ </script>
+
+</body>
+</html>
