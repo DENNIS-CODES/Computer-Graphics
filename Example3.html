@@ -1,0 +1,45 @@
+<!--The example draws four rectangles, each with a gradient going in a different direction, all going from red to 50% transparent blue.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        /* This Examples show how you can create a gradient by specifying a color stop with an RGBa() color value which includes degrees of transparency.*/ 
+        var canvas =
+        document.getElementById("demoCanvas");
+        if (canvas.getContext)
+        {
+        var ctx = canvas.getContext("2d");
+        var gradient1 =
+        ctx.createLinearGradient(0, 0, 50, 0);
+        gradient1.addColorStop(0, 'red');
+        gradient1.addColorStop(1, 'rgba(0, 0, 255, 0.5)');
+        ctx.fillStyle = gradient1;
+        ctx.fillRect(0, 0, 75, 75);
+        
+        var gradient2 =
+        ctx.createLinearGradient(0, 0, 0, 50);
+        gradient2.addColorStop(0, 'red');
+        gradient2.addColorStop(1, 'rgba(0, 0, 255, 0.5)');
+        ctx.fillStyle = gradient2;
+        ctx.fillRect(75, 0, 75, 75);
+        var gradient3 =
+        ctx.createLinearGradient(150, 0, 200,
+        50);
+        gradient3.addColorStop(0, 'red');
+        gradient3.addColorStop(1, 'rgba(0, 0, 255, 0.5)');
+        ctx.fillStyle = gradient3;
+        ctx.fillRect(150, 0, 75, 75);
+        
+        var gradient3 =
+        ctx.createLinearGradient(275, 50, 225,
+        0);
+        gradient3.addColorStop(0, 'red');
+        gradient3.addColorStop(1, 'rgba(0, 0, 255, 0.5)');
+        ctx.fillStyle = gradient3;
+        ctx.fillRect(225, 0, 75, 75);
+        }
+        </script>
+</body>
+</html>
