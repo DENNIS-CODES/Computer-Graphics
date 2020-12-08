@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var canvas =
+        document.getElementById("myCanvas");
+        if (canvas.getContext){
+        var ctx = canvas.getContext("2d");
+        // create new image object to use as pattern
+        var image1 = new Image();
+        var image2 = new Image();
+        image1.src = pattern1.png';
+        image2.src = pattern3.png';
+        var pat1 = ctx.createPattern(image1, "repeat");
+        var pat2 = ctx.createPattern(image2, "repeat");
+         ctx.lineWidth = 4;
+        // stroke line and fill rect with block pattern
+        ctx.beginPath();
+        ctx.moveTo(50, 10);
+        ctx.lineTo(150, 10);
+        ctx.strokeStyle = pat1;
+        ctx.stroke();
+        ctx.fillStyle = pat1;
+        ctx.fillRect(50, 20, 100, 150);
+        // stroke line and fill rect with cork pattern
+        ctx.beginPath();
+        ctx.moveTo(200, 10);
+        ctx.lineTo(300, 10);
+        ctx.strokeStyle = pat2;
+        ctx.stroke();
+        ctx.fillStyle = pat2;
+        ctx.fillRect(200, 20, 100, 150);
+        }
+        </script>
+</body>
+</html>
