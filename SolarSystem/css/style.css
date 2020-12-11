@@ -43,7 +43,7 @@ body {
     font-size: 10px;
     font-family: 'Grandstander', cursive;
     font-weight: 400;
-    background-color: black;
+    background-color: rgb(8, 8, 8);
 }
 /* Universe & solar system */ 
 #universe {
@@ -223,3 +223,338 @@ body {
         transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
     }
 }
+
+/*______________________Opening ___________________ */
+.view-3D .opening #sun,
+.view-3D .opening .orbits,
+.view-3D .opening .pos,
+.view-3D .opening .planet,
+.view-3D .opening .statelite,
+.view-3D .opening .ring {
+    transition-duration: 4s;
+}
+
+#universe.opening #sun {
+    box-shadow: 0 0 0 rgba(255, 160, 60, 0)
+}
+
+/*--------------------2D View ----------------------*/
+.view-2D.zoom-large #sun {
+    transform-style: flat;
+}
+.view-2D.zoom-large .orbit {
+    transform-style: flat;
+}
+
+.view-2D #sun,
+.view-2D .ring {
+    transform: rotateX(0deg);
+}
+
+.view-2D .planet,
+.view-2D .moon {
+    transform: rotateX(90deg);
+}
+
+/* ----------------- 3D View -------------------*/
+.view-3D.zoom-large #sun {
+    transform-style: preserve-3d;
+}
+
+.view-3D.zoom-large .orbit {
+    transform-style: preserve-3d;
+}
+.view-3D #solar-system {
+    transform: rotateX(75deg);
+}
+.view-3D .ring {
+    transform: rotateX(-90deg);
+}
+.view-3D .ring {
+    transform: rotateX(90deg);
+}
+
+.view-3D .planet,
+.view-3D .moon {
+    transform: rotateX(0deg)
+}
+
+/*---------------- Large zoom -------------- */
+.zoom-large #solar-system {
+    width: 100%;
+}
+
+.zoom-large.view-2D .scale-stretched
+#solar-system {
+    font-size: 26%;
+}
+
+.zoom-large.view-3D .scale-stretched
+#solar-system {
+    font-size: 26%;
+}
+
+.zoom-large.view-3D .scale-stretched
+#solar-system {
+    font-size: 62%;
+}
+
+.zoom-large.view-2D .scale-d #solar-system {
+    font-size: 22%;
+}
+
+.zoom-large.view-3D .scale-d #solar-system {
+    font-size: 48%;
+}
+.zoom-large.view-2D .scale-s #solar-system {
+    font-size: 7%;
+}
+.zoom-large.view-3D .scale-s #solar-system {
+    font-size: 14%;
+}
+
+/*---------------------- Close Zoom --------------------- */
+.zoom-close #solar-system {
+    width: 200%;
+    font-size: 100%; 
+}
+  
+  .zoom-close .scale-stretched #solar-system {
+    margin-left: -100%; 
+}
+  
+  .zoom-close .scale-d #solar-system {
+    margin-left: -106%; 
+}
+  
+  .zoom-close.view-2D .scale-d #solar-system {
+    font-size: 84%; 
+}
+  
+  .zoom-close.view-3D .scale-d #solar-system {
+    font-size: 84%; 
+}
+  
+  .zoom-close .scale-s #solar-system {
+    margin-left: -145%; 
+}
+  
+  .zoom-close.view-2D .scale-s #solar-system {
+    font-size: 40%; 
+}
+  
+  .zoom-close.view-3D .scale-s #solar-system {
+    font-size: 40%; 
+}
+  
+  .zoom-close .orbit,
+  .zoom-close .pos,
+  .zoom-close .planet,
+  .zoom-close .satelite,
+  .zoom-close .ring {
+    animation-play-state: paused!important;
+    animation-duration: 0s!important;
+    animation: none!important; 
+}
+  
+  .zoom-close.view-2D .planet,
+  .zoom-close.view-2D .moon {
+    transform: rotateX(0deg); 
+}
+  
+  .zoom-close.view-3D .planet {
+    transform: rotateX(-90deg); 
+}
+  
+  .zoom-close.view-3D .moon {
+    transform: rotateX(90deg); 
+}
+  
+  .zoom-close .pos {
+    left: 100%!important;
+    top: 50%!important; 
+}
+
+/*-------------------------- Data ------------------------------*/
+/*-------------------------- Speed -----------------------------*/
+#mercury .pos,
+#mercury .planet,
+#mercury.orbit {
+  animation-duration: 2.89016s; 
+}
+
+#venus .pos,
+#venus .planet,
+#venus.orbit {
+  animation-duration: 7.38237s; 
+}
+
+#earth .pos,
+#earth .planet,
+#earth.orbit {
+  animation-duration: 12.00021s; 
+}
+
+#earth .orbit .pos,
+#earth .orbit {
+  animation-duration: 0.89764s; 
+}
+
+#mars .pos,
+#mars .planet,
+#mars.orbit {
+  animation-duration: 22.57017s; 
+}
+
+#jupiter .pos,
+#jupiter .planet,
+#jupiter.orbit {
+  animation-duration: 142.35138s; 
+}
+
+#saturn .pos,
+#saturn .planet,
+#saturn.orbit,
+#saturn .ring {
+  animation-duration: 353.36998s; 
+}
+
+#uranus .pos,
+#uranus .planet,
+#uranus.orbit {
+  animation-duration: 1008.20215s; 
+}
+
+#neptune .pos,
+#neptune .planet,
+#neptune.orbit {
+  animation-duration: 1977.49584s; 
+}
+
+/*-------------------Planets Size ------------------------*/
+/*-----------------Streched size --------------------------*/
+.scale-stretched #sun {
+    font-size: 24em; 
+}
+  
+  .scale-stretched #mercury .planet {
+    font-size: 1.5em; 
+}
+  
+  .scale-stretched #venus .planet {
+    font-size: 3.72em; 
+}
+  
+  .scale-stretched #earth .planet {
+    font-size: 3.92em; 
+}
+  
+  .scale-stretched #earth .moon {
+    font-size: 1.2em; 
+}
+  
+  .scale-stretched #mars .planet {
+    font-size: 2.9em; 
+}
+  
+  .scale-stretched #jupiter .planet {
+    font-size: 12em; 
+}
+  
+  .scale-stretched #saturn .planet {
+    font-size: 10.8em; 
+}
+  
+  .scale-stretched #uranus .planet {
+    font-size: 4.68em; 
+}
+  
+  .scale-stretched #neptune .planet {
+    font-size: 4.9em; 
+}
+
+/* -------------------------------scaled Sizes -------------------------- */
+/* (planets radius * 2) * ratio */
+/* distance ratio: 0.00000075em; */
+/*-----------------------------Planets distance scale -------------------------------*/
+.scale-d #sun {
+    font-size: 41.73048em; 
+}
+  
+  .scale-d #mercury .planet {
+    font-size: 0.14634em; 
+}
+  
+  .scale-d #venus .planet {
+    font-size: 0.36306em; 
+}
+  
+  .scale-d #earth .planet {
+    font-size: 0.38226em; 
+}
+  
+  .scale-d #earth .moon {
+    font-size: 0.08226em; 
+}
+  
+  .scale-d #mars .planet {
+    font-size: 0.20334em; 
+}
+  
+  .scale-d #jupiter .planet {
+    font-size: 4.19466em; 
+}
+  
+  .scale-d #saturn .planet {
+    font-size: 3.49392em; 
+}
+  
+  .scale-d #uranus .planet {
+    font-size: 1.52172em; 
+}
+  
+  .scale-d #neptune .planet {
+    font-size: 1.47732em; 
+}
+  
+  /* --------------------------------------------------------------------------- planet size scale sizes */
+  .scale-s #sun {
+    font-size: 417.3048em; 
+}
+  
+  .scale-s #mercury .planet {
+    font-size: 1.4634em; 
+}
+  
+  .scale-s #venus .planet {
+    font-size: 3.6306em; 
+}
+  
+  .scale-s #earth .planet {
+    font-size: 3.8226em; 
+}
+  
+  .scale-s #earth .moon {
+    font-size: 0.8226em; 
+}
+  
+  .scale-s #mars .planet {
+    font-size: 2.0334em; 
+}
+  
+  .scale-s #jupiter .planet {
+    font-size: 41.9466em; 
+}
+  
+  .scale-s #saturn .planet {
+    font-size: 34.9392em; 
+}
+  
+  .scale-s #uranus .planet {
+    font-size: 15.2172em; 
+}
+  
+  .scale-s #neptune .planet {
+    font-size: 14.7732em; 
+}
+/*-------------------- Streched orbits ----------------------*/
