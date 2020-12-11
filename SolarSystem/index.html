@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title dir="ltr">3D & 2D Solar System</title>
+    <title dir="ltr">3D CSS Solar System</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
 </head>
 <body class="opening hide-UI view-2D zoom-large data-close controls-close">
@@ -19,7 +19,7 @@
     <div id="data">
         <a class="sun" title="sun" href="#sunspeed">Sun</a>
         <a class="mercury" title="mercury" href="#mercuryspeed">Mercury</a>
-        <a class="mars" title="venus" href="#venusspeed">Venus</a>
+        <a class="venus" title="venus" href="#venusspeed">Venus</a>
         <a class="earth active" title="earth" href="#earthspeed">Earth</a>
         <a class="mars" title="mars" href="#marsspeed">Mars</a>
         <a class="jupiter" title="jupiter" href="#jupiterspeed">Jupiter</a>
@@ -35,28 +35,32 @@
         <label class="set-zoom">
             <input type="checkbox">
         </label>
-        <label type="radio" class="set-speed" name="scale" checked>
+        <label>
+        <input type="radio" class="set-speed" name="scale" checked>
             <span>Speed</span>
         </label>
-        <label type="radio" class="set-size" name="scale">
+        <label>
+        <input type="radio" class="set-size" name="scale">
             <span>Size</span>
         </label>
-        <label type="radio" class="set-distance" name="scale">
+        <label>
+        <input type="radio" class="set-distance" name="scale">
             <span>Distance</span>
         </label>
     </div>
     <!-- Universe & and Solar System-->
     <div id="universe" class="scale-stretched">
         <div id="galaxy">
-            <div id="solar-system" class="earth">
-                <div id="mercury" class="orbit">
-                    <div class="pos">
-                        <d1 class="infos">
-                            <dt>Mercury</dt>
-                            <dd><span></span></dd>
-                        </d1>
-                    </div>
+          <div id="solar-system" class="earth">
+            <div id="mercury" class="orbit">
+              <div class="pos">
+                <div class="planet">
+                  <dl class="infos">
+                    <dt>Mercury</dt>
+                    <dd><span></span></dd>
+                  </dl>
                 </div>
+              </div>
             </div>
             <div id="venus" class="orbit">
                 <div class="pos">
@@ -106,6 +110,7 @@
               <div id="saturn" class="orbit">
                 <div class="pos">
                   <div class="planet">
+                    <div class="ring"></div>
                     <dl class="infos">
                       <dt>Saturn</dt>
                       <dd><span></span></dd>
@@ -149,6 +154,6 @@ if (typeof jQuery == 'undefined') {
 }
 </script>
 <script src="js/prefixfree.min.js"></script>
-<script src="js/scripts.min.js"></script>    
+<script src="js/scripts.min.js"></script>   
 </body>
 </html>
